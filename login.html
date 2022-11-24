@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                background-color:rgb(110,98,148);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class = "col-md-6" style="margin-top:150px;">
+                <img src ="images\logo.png" style="height:60px;">
+                <hr style="color:background;"><br>
+                <p style="color:white; font-size:18px;">Its time to take walk-through along the best thoughts.</p>
+                <p style="color:white; font-size:18px;">Share your prespective,<br>Get the best,</p>
+                <p style="color:white; font-size:18px;margin-bottom:25px;">Help yourself to find the best angles in and around..</p>
+                <a class="btn btn-default" href="register.html">Join our community</a>
+            </div>
+            <div class="container">
+                <div class = "col-md-5" style="margin-top:180px;margin-left:100px;">
+                    <div class="panel" style="border:gray;box-shadow: 0 20px 20px 0px rgba(0.3, 0.3, 0.3, 0.3), 0 0px 10px 10px rgba(0.3, 0.3, 0.3, 0.3);width:500px">
+                        <div class="panel-heading" style="background-color:#8B81AA;"></div>
+                        <div class="panel-body" style="background-color:#8B81AA;padding:6%;">
+                            <form action="homepage.html">
+                                <p style="color:white; font-size:25px;margin-left:140px;">Login to continue</p>
+                                <div class="form-group" style="margin-top:30px;">
+                                    <input type="email" class="form-control" id="email" placeholder="Email ID" name="email">
+                                </div>
+                                <div class="form-group" style="margin-top:30px;">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Password" name="pwd">
+                                    <label id="e1" class="error" style="color:red;display:none;">Email or password error</label>
+                                </div>
+                                <button id="b1" type="button" class="btn btn-primary" style="font-size:15px;margin-top:20px;">PROCEED</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script language="javascript">
+            $("#b1").click(function(){
+                 if($("#email").val()=="xyz@gmail.com"&&$("#pwd").val()=="Tcs#1234")
+            {
+               window.location.assign("homepage.html");  
+            }
+            else
+            {
+                $("#e1").show();
+            }
+            });
+           
+            $("#pwd").keyup(function(event) {
+                if (event.keyCode === 13) {
+                    if($("#email").val()=="xyz@gmail.com"&&$("#pwd").val()=="Tcs#1234")
+                    {
+                        window.location.assign("homepage.html");  
+                    }
+                    else
+                    {
+                        $("#e1").show();
+                    }
+                }
+            });
+            $("#reg").click(function(){
+               window.location.assign("register.html");  
+            });
+        </script>
+    </body>
+</html>
